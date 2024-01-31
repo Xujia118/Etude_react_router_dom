@@ -11,6 +11,7 @@ import Events from "./pages/Events";
 import Error from "./pages/Error";
 import Nav from "./Nav";
 import Client from "./pages/Client";
+import Book from "./pages/Book";
 
 function App() {
   return (
@@ -18,7 +19,10 @@ function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
+
         <Route path="/clients/:clientId" element={<Client />} />
+        <Route path="/clients/:clientId/books/:bookId" element={<Book />} />
+
         <Route path="/about" element={<About />} />
         <Route path="/events" element={<Events />} />
         <Route path="/*" element={<Error />} />
